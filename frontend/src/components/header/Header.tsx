@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import MobileNav from "../mobileNav/MobileNav";
 
 const Header = () => {
     return (
@@ -9,12 +10,15 @@ const Header = () => {
                     to="/"
                     className="text-3xl font-bold tracking-tighter text-green-600"
                 >
-                    RitzEats.com
+                    RitzEats
                 </Link>
+                <div className="md:hidden">
+                    <MobileNav />
+                </div>
             </div>
 
         </div>
-    )
-}
+    );
+};
 
-export default Header
+export default Header;
