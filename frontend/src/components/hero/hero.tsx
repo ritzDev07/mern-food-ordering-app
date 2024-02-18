@@ -9,7 +9,7 @@ const Section = ({ bgColor }: SectionProps) => {
     const shadowClass = bgColor.includes('green') ? 'drop-shadow-lg' : '';
 
     return (
-        <div className={`bg-${bgColor} ${shadowClass} w-1/2 h-[100px] md:h-[250px]`}></div>
+        <div className={`${bgColor} ${shadowClass} w-1/2 h-[100px] md:h-[250px]`}></div>
     );
 };
 
@@ -18,14 +18,14 @@ const Hero = () => {
         <div className="relative">
             {/* First row */}
             <div className="w-full max-h-[500px] flex flex-row justify-center items-center">
-                <Section bgColor="green-600" />
+                <Section bgColor=" bg-herogreen" />
                 <Section bgColor="white" />
             </div>
 
             {/* Second row */}
             <div className="w-full max-h-[500px] md:max-h-[600px] flex flex-row justify-center items-center">
                 <Section bgColor="white" />
-                <Section bgColor="green-600" />
+                <Section bgColor="bg-herogreen" />
             </div>
 
             {/* Image container */}
