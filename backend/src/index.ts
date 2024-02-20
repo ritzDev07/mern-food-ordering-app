@@ -2,6 +2,9 @@ import express, { Response, Request } from "express";
 import cors from "cors";
 import "dotenv/config";
 import mongoose from "mongoose";
+import myUserRoute from "./routes/MyUserRoute";
+
+
 const PORT = process.env.PORT || 4100;
 
 // Connect to MongoDB using the provided connection string
@@ -19,9 +22,9 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.get("/test", async (req: Request, res: Response) => {
-    res.json({ message: "hello" });
-});
+//EndPoints
+app.use("/api/my/user", myUserRoute);
+
 
 
 app.listen(PORT, () => {
