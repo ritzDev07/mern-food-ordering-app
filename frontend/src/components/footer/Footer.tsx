@@ -4,43 +4,53 @@ import { Link } from 'react-router-dom';
 const footerProductLinks = [
     {
         name: "About us",
-        link: "/about"
+        link: "/",
     },
     {
         name: "Careers",
+        link: "/",
     },
     {
         name: "Our Blog",
+        link: "/",
     },
     {
         name: "Reviews",
+        link: "/",
     },
 ];
 
 const footercompanyLinks = [
     {
         name: "Recent Offers",
+        link: "/",
     },
     {
         name: "Recent Food",
+        link: "/",
     },
     {
         name: "Events",
+        link: "/",
     },
 ];
 
 const footerSupportLinks = [
     {
         name: "FAQ",
+        link: "/",
     },
     {
         name: "Reviews",
+        link: "/",
     },
     {
         name: "Contact Us",
+        link: "/",
     },
     {
         name: "Live chat",
+        link: "/",
     },
 ];
 
