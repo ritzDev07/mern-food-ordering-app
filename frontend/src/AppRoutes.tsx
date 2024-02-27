@@ -3,6 +3,7 @@ import Layout from "./layouts/Layout";
 import Homepage from "./pages/homepage/Homepage";
 import AuthCallbackPage from "./pages/authCallbackPage/AuthCallbackPage";
 import UserProfilePage from "./pages/userProfilepage/UserProfilePage";
+import ProtectedRoute from "./auth/ProtectedRoute";
 
 
 const AppRoutes = () => {
@@ -19,11 +20,16 @@ const AppRoutes = () => {
                 <AuthCallbackPage />
             } />
 
-            <Route path="/user-profile" element={
-                <Layout>
-                    <UserProfilePage />
-                </Layout>
-            } />
+            <Route element={<ProtectedRoute />}>
+                
+                <Route path="/user-profile" element={
+                    <Layout>
+                        <UserProfilePage />
+                    </Layout>
+                } />
+
+            </Route>
+
 
             <Route path="*" element={
                 <Layout showHero>
