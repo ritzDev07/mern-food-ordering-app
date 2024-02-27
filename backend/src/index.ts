@@ -23,6 +23,14 @@ app.use(express.json());
 app.use(cors());
 
 //EndPoints
+
+//to check if the server has succesfully started
+app.get("/health", async (req: Request, res: Response) => {
+    res.send({
+        message: "Health OK"
+    })
+});
+
 app.use("/api/my/user", myUserRoute);
 
 
