@@ -9,4 +9,7 @@ export default defineConfig({
 			"@": path.resolve(__dirname, "./src"),
 		},
 	},
+	build: {
+		outDir: 'dist', // This should match the directory you want to publish
+	},
 })
