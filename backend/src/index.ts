@@ -3,7 +3,7 @@ import cors from "cors";
 import "dotenv/config";
 import mongoose from "mongoose";
 import myUserRoute from "./routes/MyUserRoute";
-
+import path from "path";
 
 const PORT = process.env.PORT || 4100;
 
@@ -30,6 +30,8 @@ app.get("/health", async (req: Request, res: Response) => {
         message: "Health OK"
     })
 });
+
+app.use(express.static(path.join(__dirname,"../../frontend/dist")));
 
 app.use("/api/my/user", myUserRoute);
 
